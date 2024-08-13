@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = new Promise((res, rej) => {
+        let v = 0;
+        if (v == 4) {
+          res("resolved");
+          console.log("r");
+        } else {
+          rej("rejected");
+        }
+      });
+      a.then(() => {
+        console.log("ok");
+      }).catch(() => {
+        console.log("fail");
+      });
+    </script>
+  </body>
+</html>
